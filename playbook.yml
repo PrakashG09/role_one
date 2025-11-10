@@ -1,7 +1,11 @@
----
-- name: Example play using both roles
-  hosts: localhost
+- hosts: localhost
   gather_facts: false
+
   roles:
-    - role: set_vars
-    - role: print_var
+    - role: set_vars  # load variables
+
+  tasks:
+    - name: Include only the single task from print_var role
+      include_role:
+        name: print_var
+      tasks_from: main
