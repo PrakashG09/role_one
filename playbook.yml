@@ -3,5 +3,5 @@
   hosts: localhost
   gather_facts: false
   roles:
-    - role: set_var
+    - role: set_vars
     - role: print_var
