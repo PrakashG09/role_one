@@ -8,4 +8,4 @@
     - name: Include only the single task from print_var role
       include_role:
         name: print_var
-        tasks_from: print_my_var
+        tasks_from: main
