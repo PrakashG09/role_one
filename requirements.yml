@@ -1,0 +1,9 @@
+---
+roles:
+  - name: print_var
+    src: https://github.com/PrakashG09/role_one.git
+    version: main
+
+  - name: set_vars
+    src: https://github.com/PrakashG09/role_two.git
+    version: main
