@@ -1,0 +1,7 @@
+---
+- name: Example play using both roles
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - role: set_var
+    - role: print_var
