@@ -1,4 +1,11 @@
----
-- name: Print the value of my_var
-  ansible.builtin.debug:
-    msg: "The value of my_var is: {{ my_var }}"
+- hosts: localhost
+  gather_facts: false
+
+  roles:
+    - role: set_vars  # load variables
+
+  tasks:
+    - name: Include only the single task from print_var role
+      include_role:
+        name: print_var
+      tasks_from: main
